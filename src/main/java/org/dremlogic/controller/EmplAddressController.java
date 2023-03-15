@@ -2,6 +2,7 @@ package org.dremlogic.controller;
 
 import java.util.Optional;
 
+
 import org.dremlogic.entity.EmployeeAddress;
 import org.dremlogic.repository.EmplAddressRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,6 +26,8 @@ public class EmplAddressController {
 	
 	@GetMapping("/findById/{id}")
 	public Optional<EmployeeAddress> findEmplAddressById(@PathVariable Long id) {
+		
+		System.out.println("Check this out " + id);
 		return this.repo.findById(id);
 	}
 	
